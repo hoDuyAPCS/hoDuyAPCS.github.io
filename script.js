@@ -1,4 +1,4 @@
-import './style.css'
+
 import * as THREE from "https://cdn.skypack.dev/three@0.146.0";
 
 const scene = new THREE.Scene();
