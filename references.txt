@@ -1,3 +1,0 @@
-Hornorable mentions
-https://css-tricks.com/tale-of-animation-performance/
-https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf
