@@ -22,7 +22,7 @@ body {
   background-image: url('ego.jpg');
   background-size: cover;
   color: green;
-  height: 300px;
+  height: 370px;
 }
 .wallpaper::after {
   content: "";
@@ -44,16 +44,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background: linear-gradient(to left, #cf321a, #4a00e0);
-  clip-path: circle(39%); 
+  clip-path: circle(31%); 
   /* background-image: url('ego.jpg'); */
 }
 
 .profile {
   /* margin-top: 90px; */
   display: block;
-  max-width: 400px;
+  max-width: 700px;
   height: auto;
-  clip-path: circle(38%); 
+  clip-path: circle(30%); 
   /* clip-path: path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z' at center); */
   /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); */
 }
