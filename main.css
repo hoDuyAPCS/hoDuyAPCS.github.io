@@ -58,9 +58,16 @@ body {
   /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); */
 }
 
+.title{
+  display: grid;
+  place-items: center;
+  align-content: center;
+  transform: translate(0%, 50%);
+}
+
 .info {
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, 10%);
   text-align: center;
@@ -70,7 +77,32 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+section{
+  display: grid;
+  place-items: center;
+  align-content: center;
+  /* to give every section a large screen like a slide */
+  min-height: 100vh; 
+}
 /* .info h1 {
   margin-top: 0px;
 } */
+
+/* animation */
+.hidden{
+  opacity: 0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+
+
+.logo{
+  margin: 10px;
+}
