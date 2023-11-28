@@ -40,6 +40,9 @@ p{
     border-radius: 10px;
     margin: auto;
 }
+a{
+    text-decoration: none;
+}
 
 /* This is the styling for the scroll and snap */
 .wrapper{
