@@ -191,6 +191,7 @@ a{
     background-color: blueviolet;
     border: 2px solid white;
     border-radius: 10px;
+    cursor: pointer;
 }
 #cards{
     /* background-color: aqua; */
