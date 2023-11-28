@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* defines a CSS variable within the :root pseudo-class. The :root selector targets the root element of the document, which is usually the <html> element. Defining CSS variables within :root makes them available for use throughout the entire document. */
+:root{
+    /* CSS variables, denoted by the -- prefix, allow you to store and reuse values within your stylesheets. */
+    --bg-color: rgb(20,20,20);
+}
+
+body{
+    /* reference and apply the --bg-color variable */
+    /* background-color: var(--bg-color); */
+    background-color: black;
+    /* set the text color of website to white */
+    color: whitesmoke;
+    /* sets the margin of the element to 0 pixels. Margins create space around an element, and setting them to 0 pixels removes any spacing around the element. */
+    margin: 0px;
+    /* sets the padding of the element to 0 pixels. Padding creates space within an element, and setting it to 0 pixels removes any internal spacing within the element. */
+    padding: 0px;
+    
+}
+h1{
+    padding-top: 50px;
+    font-family: 'Lora', serif;
+    letter-spacing: 4px;
+    text-align: center;
+}
+p{
+    font-family: 'Lora', serif;
+}
+.blackbar{
+    width: 20%;
+    height: 4px;
+    background-color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* This is the styling for the scroll and snap */
+.wrapper{
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+.slide {
+    height: 100vh; /* Adjust the height as needed */
+    scroll-snap-align: start;
+    background-color: aliceblue;
+    color: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* This is styling for the front page */
+
+
+.front_page{
+    position: relative;
+    height: 100vh;
+}
+.icon{
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.1); /* Make the icon 10% larger on hover */
+}
+.text{
+    position: absolute;
+    z-index: 1;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#yukichi{
+    top: 5%;
+    right: 10%;
+}
+#hoduy{
+    top: 20%;
+    left: 10%;
+}
+#game{
+    top: 20px;
+    right:300px;
+}
+#think{
+    top: 110px;
+    right:250px;
+}
+#education{
+    top: 250px;
+    left: 180px;
+}
+#program{
+    top: 250px;
+    left: 280px;
+}
+#lang{
+    top: 330px;
+    left: 231px;
+}
+#mycontact{
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/4/4b/Phone_font_awesome.svg) center no-repeat;
+    background-size: 50%;
+}
+#mycontact_bg{
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    border-radius: 100%;
+    transition: transform 0.3s ease;
+}
+#mycontact:hover{
+    transform: scale(1.4);
+}
+
+/* This is the styling for the second page  */
+
+.hcmus{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    height: 250px;
+    width: 87%;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    margin: 20px auto 0;
+    gap : 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#apcs{
+    height: 180px;
+    width: 60%;
+    margin: 40px auto 0;
+}
+.textbox{
+    /* background-color: aqua; */
+    position: relative;
+    text-align: justify;
+}
+.dropshadow{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* This is the styling for the third slide  */
+#Slide3{
+    background-color: var(--bg-color);
+    color: aliceblue;
+}
+#blackbar3{
+    background-color: aliceblue;
+    width: 30%;
+}
+#textbar3{
+    margin-top: 10px;
+    text-align: center;
+}
+.card{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#cards{
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    width: 450px;
+    height: 450px;
+    margin: 20px auto 0;
+    grid-gap: 1px;
+}
+#c1{
+    grid-row: 8 / 10;
+    grid-column: 1 / 8;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg) center no-repeat;
+    background-size: 20%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#p1{
+    grid-row: 5 / 10;
+    grid-column: 8 / 10;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg) center no-repeat;
+    background-size: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#d1{
+    grid-row: 3 / 5;
+    grid-column: 8 / 10;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg) center no-repeat;
+    background-size: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#g1{
+    grid-row: 6 / 8;
+    grid-column: 5 / 8;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg) center no-repeat;
+    background-size: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#r1{
+    grid-row: 4 / 8;
+    grid-column: 1 / 5;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg) center no-repeat;
+    background-size: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#h1{
+    grid-row: 2 / 4;
+    grid-column: 1 / 4;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg) center no-repeat;
+    background-size: 60%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#f1{
+    grid-row: 5 / 6;
+    grid-column: 5 / 8;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg) center no-repeat;
+    background-size: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* This is the styling for the fourth slide */
+#langs{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0;
+    /* background-color: aquamarine; */
+    width: 1000px;
+    height: 500px;
+}
+#eng{
+    background-color: black;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-rows: 20% 20% 20% 20%; 
+    grid-template-columns: 20% 20% 20% 20%;
+    width: 45%;
+    height: 100%;
+    border: 2px solid black;
+}
+#jap{
+    background-color: black;
+    border: 2px solid black;
+    width: 45%;
+    height: 100%;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-rows: 20% 20% 20% 20%; 
+    grid-template-columns: 20% 20% 20% 20%;
+}
+.pic{
+    /* border: 2px solid black; */
+    background-color: aliceblue;
+}
+#ielts{
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/7/7f/IELTS_logo.svg) center no-repeat;
+    background-size: 80%;
+    z-index: 1;
+}
+#ielts_bg{
+    background-color: aliceblue;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    z-index: 0;
+}
+#eflag{
+    grid-row: 1 / 2;
+    grid-column: 4 / 6;
+    z-index: 1;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg) center no-repeat;
+    background-size: cover;
+}
+#escore{
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+}
+#bigben{
+    grid-area: 2 / 3 / 6 / 6;
+    z-index: 0;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/d/d5/Big_Ben_2007-1.jpg) center no-repeat;
+    background-size: cover;
+}
+#rscore{
+    grid-row: 4 / 6;
+    grid-column: 1 / 3;
+}
+#rank{
+    text-align: center;
+    font-size: 120px;
+    font-family: 'Work Sans', sans-serif;
+}
+#rankpart{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+/* Japanese part */
+#jflag{
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    z-index: 1;
+    background: url(https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg) center no-repeat;
+    background-size: cover;
+}
+#jlpt{
+    grid-row: 1 / 2;
+    grid-column: 3 / 6;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/0/05/Japanese-Language_Proficiency_Test_logo.svg) center no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+#jlpt_bg{
+    grid-row: 1 / 2;
+    grid-column: 3 / 6;
+    background-color: aliceblue;
+}
+#level{
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+}
+#fuji{
+    grid-row: 4 / 6;
+    grid-column: 1 / 6;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Views_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/1024px-Views_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg) center no-repeat;
+    background-size: cover;
+}
+#jquote{
+    grid-row: 3 / 4;
+    grid-column: 3 / 6;
+}
+#jrank{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Work Sans', sans-serif;
+}
+#jrankpart{
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+#jtext{
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* This is the styling for the fifth slide */
+#Slide5{
+    background-color: var(--bg-color);
+    color: aliceblue;
+}
+h1 > .magic{
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,violet,red,green,#2987ca);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#blackbar5{
+    background-color: white;
+    width: 40%;
+}
+#image-track {
+    /* background-color: #2987ca; */
+    width: 170%;
+    display: flex;
+    gap: 4vmin;
+    margin-top: 40px;
+    margin-left: 230px;
+    left: 10%;
+    top: 50%;
+    /* transform: translate(0%, -50%);  */
+    overflow: hidden;
+    user-select: none; /* -- Prevent image highlighting -- */
+}  
+#image-track > .image {
+    width: 230px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+/* styling for the sixth slide */
+.diogenes{
+    color: rgb(179, 197, 68);
+    height: 100vh;
+    background-color: gray;
+    background-image: url("assets/dio.png");
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+#blackbar6{
+    background-color: rgb(179, 197, 68);
+}
+#video{
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 40px;
+    overflow: hidden;
+    z-index: 1;
+}
+#quote{
+    width: 570px;
+    margin: 20px auto 0;
+}
+
+/* Styling for contact information */
+#Slide7{
+    background-color: var(--bg-color);
+    color: aliceblue;
+    position: relative;
+}
+#contact{
+    position: absolute;
+    z-index: 99;
+    left: 30px;
+}
+.canvas_wrap{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    position: relative;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+}
+#return{
+    width: 50px;
+    right: 40px;
+    top: 40px;
+    z-index: 99;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#return:hover{
+    transform: scale(1.3);
+}
+#zalo{
+    position: absolute;
+    z-index: 99;
+    font-family: 'Lora', serif;
+    letter-spacing: 4px;
+    top: 100px;
+    left: 30px;
+}
+#fb{
+    position: absolute;
+    z-index: 99;
+    font-family: 'Lora', serif;
+    letter-spacing: 4px;
+    top: 140px;
+    left: 30px;
+}
+
+/* STYLING FOR ANIMATION */
+@keyframes background-pan {
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: -200% center;
+    }
+}

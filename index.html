@@ -1,59 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="main.css" />
-    <title>Cat I am</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoduy portfolio</title>
     <link rel="icon" href="favicat.ico" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="welcome_message">
-      <h2 id="word123"></h2>
-      <h1 id="description123" class="prevent-select">
-        Check out my
-        <span class="magic">
-          <a href="./pages/game/game.html" style="text-decoration: none"
-            >Magical Journey</a
-          ></span
-        >
-      </h1>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora&family=Noto+Sans+JP&family=Roboto+Mono:wght@100&family=Work+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="jquery.min.js"></script>
+    <script defer src="main.js"></script>
+    
+</head>
+
+<body>
+    <!-- <div class="front_page">
+        <img class="background" src="./assets/ai_background.png" alt="">
+        <img class="icon" id="education" src="./assets/education.svg" alt="">
+        <img class="icon" id="game" src="./assets/game.svg" alt="">
+        <img class="icon" id="program" src="./assets/program.svg" alt="">
+        <img class="icon" id="think" src="./assets/think.svg" alt="">
+        <img class="icon" id="lang" src="./assets/lang.svg" alt="">
+        <img class="text" id="hoduy" src="./assets/hoduy.svg" alt="">
+        <img class="text" id="yukichi" src="./assets/yukichi.svg" alt="">
+    </div> -->
+    <div class="wrapper">
+
+
+        <div class="slide front_page" id="Slide1">
+            <div onclick="scrollToSection7()" id="mycontact"></div>
+            <div id="mycontact_bg"></div>
+            <img class="background" src="./assets/ai_background.png" alt="">
+            <img class="icon" id="education" onclick="scrollToSection2()" src="./assets/education.svg" alt="">
+            <img class="icon" id="program" onclick="scrollToSection3()" src="./assets/program.svg" alt="">
+            <img class="icon" id="lang" onclick="scrollToSection4()" src="./assets/lang.svg" alt="">
+            <img class="icon" id="game" onclick="scrollToSection5()" src="./assets/game.svg" alt="">
+            <img class="icon" id="think" onclick="scrollToSection6()" src="./assets/think.svg" alt="">
+            <img class="text" id="hoduy" src="./assets/hoduy.svg" alt="">
+            <img class="text" id="yukichi" src="./assets/yukichi.svg" alt="">
+        </div>
+
+
+
+        <div class="slide" id="Slide2">
+            <h1>EDUCATION</h1>
+            <img id="return" onclick="scrollToSection1()" src="assets/return.svg" alt="">
+            <div class="blackbar"></div>
+            <div id="school" class="hcmus">
+                <img class="dropshadow" src="assets/fit.jpg" alt="">
+                <div id="school_info" class="textbox">
+                    <p>Hi, I'm Duy, a Computer Science graduate from The Ho Chi Minh City University of Science, a leading institution in Vietnam known for its excellence in higher education, scientific research, and foundational technology. With a remarkable 81 years of establishment and with over 70 professors and associate professors, the university has shaped the academic landscape and stands as a symbol of educational prowess.</p>
+                </div>
+                <img class="dropshadow" src="assets/logo.JPG" alt="">
+            </div>
+            <div id="apcs" class="hcmus">
+                <div id="school_info" class="textbox">
+                    <p>I enrolled in the Advanced Program in Computer Science which is delivered entirely in English by experienced professors. The program is a partnership with Portland State University, one of the top 10 most innovative universities in America.</p>
+                </div>
+                <img class="dropshadow" src="assets/apcs.png" alt="">
+            </div>
+            <!-- <button onclick="scrollToSection3()">Scroll to Slide 3</button> -->
+        </div>
+
+
+
+        <div class="slide" id="Slide3">
+            <h1>PROGRAMMING</h1>
+            <div id="blackbar3" class="blackbar"></div>
+            <p id="textbar3">These are the technologies I have worked with over the year...</p>
+            <div id="cards">
+                <div id="c1" class="card"></div>
+                <div id="p1" class="card"></div>
+                <div id="d1" class="card"></div>
+                <div id="g1" class="card"></div>
+                <div id="r1" class="card"></div>
+                <div id="h1" class="card"></div>
+                <div id="f1" class="card"></div>
+            </div>
+            <!-- <button onclick="scrollToSection4()">Scroll to Slide 4</button> -->
+        </div>
+
+
+
+        <div class="slide" id="Slide4">
+            <h1>LANGUAGES</h1>
+            <div class="blackbar"></div>
+            <div id="langs">
+                <div id="eng">
+                    <div id="ielts" class="pic"></div>
+                    <div id="ielts_bg" class="pic"></div>
+                    <div id="eflag" class="pic"></div>
+                    <div id="bigben" class="pic"></div>
+                    <div id="escore" class="pic">
+                        <p id="rank">7.5</p>
+                        <p id="rankpart">OVERALL</p>
+                    </div>
+                    <div id="rscore" class="pic">
+                        <p id="rank">9.0</p>
+                        <p id="rankpart">READING</p>
+                    </div>
+                </div>
+                <div id="jap">
+                    <div id="jflag" class="pic"></div>
+                    <div id="jlpt" class="pic"></div>
+                    <div id="jlpt_bg" class="pic"></div>
+                    <div id="grammar" class="pic">
+                        <p id="jrank">A</p>
+                        <p id="jrankpart"> GRAMMAR </p>
+                    </div>
+                    <div id="vocab" class="pic">
+                        <p id="jrank">A</p>
+                        <p id="jrankpart"> VOCABULARY </p>
+                    </div>
+                    <div id="listen" class="pic">
+                        <p id="jrank">A</p>
+                        <p id="jrankpart"> LISTENING </p>
+                    </div>
+                    <div id="level" class="pic">
+                        <p id="rank">N3</p>
+                        <p id="rankpart">passed</p>
+                    </div>
+                    <div id="fuji" class="pic"></div>
+                    <div id="jquote" class="pic">
+                        <p id="jtext">どんな時代であっても社会では知識のある人、能力が高い人が求められます。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <button onclick="scrollToSection1()">Scroll to Slide 1</button> -->
+        </div>
+
+
+
+        <div class="slide" id="Slide5">
+            <h1><span class="magic">GAMING</span>& INTERESTS</h1>
+            <div id="blackbar5" class="blackbar"></div>
+            <p id="textbar3">Hold and Drag</p>
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <!-- <img class="image" src="" draggable="false"> -->
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHeLNh755jpD9pkMZWWHzZtbHs2YfkJtzzJcm20MzLg--9WZVzrPgNkK4mcHyP2OWod461evlAtdH-F6jyPJ6E6O-67gm_OoNmJaXd2OZGjA2ivT3v1SICntxBYJykwl5qbdz6HoI031mWl6VfO2lX3V=w1143-h948-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHdKEN1K8yapEhHU-Sll0EmMRiW8KTjJRVC91UQg9y8NrO4Ea_eK3YrlnfVj7SCxay_b2PX_VcNRXpcNE3dgMw0hrxIRXtxD2N2hNJFrsgxCEysFMWXK0b-BS652IRqJdmW7JqCoAGB4rNyifXvFW3sm=w782-h720-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHflE4VRuO2mesvhLbtxLdKqrX3ZEe5fd_z2LhVl5vnZNl7uKIZHOGNoljHXq1_6c36Y1uxVdTtVxwd5dyzZ0vJqHiK3fogjhaynVDULs4IWlvEGWHLIPUcLmiiXmYRZDiMe97b2D1c2kZL-1HURzDOf=w980-h948-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHf3oIuY_VgDNV5E5plTwmIPgXJfS4MbRhbksmVf3JcXgfSwN542AliLOIw9YNOjlhPT_glzcxDa7XEj15vIZYeT_R9pXcTTz3iGgWTMY7saQHbA2c4s56p6D0wnYGCKS499kjqVowtbRNYTW-uU-E77=w1280-h720-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHcx-B5OIAzjMqiGSHLzQo30UqLGbvmpKlo0A2m-0RZ0Q2iL-Vci3QbC8S_9L5nERaeoo_OBAub_v1NA9m8CNtencZFv8GWgTUgSAucjn49YZppKGtdAnhsdjvVR6ocxVgjwsC4Ijf_kRMTl7OtiNXSK=w1362-h948-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHd-UyZJVN2pbznT6OJaLY0_K7-QpzyZw4dEFsFcv3iiShZyFAWG-KC6R4-sFhFjWm4fMbgTotc8sz7fOoK-rXiU_g8vjlmsQkbUtolskTi5yd4-I9Sz7GlT-TgDYCNUu2daZUI6ICxMhedNzBOi1x31=w1665-h922-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/ADCreHfMelrk3ef1_0lEI4YluWzJxmDNv_tyUSVbqQ2Y5x08EEH1Tq8T1Enlyg8xPeJkT7xskohqmx9j46I38a7n7iVquAV-QPZfg2skZh6VmeLASMAsIlNkMs6KG9nvkHtMCLF38wagZNfFNNCxWfbjEdni=w1433-h948-s-no-gm"
+                  draggable="false"
+                />
+                <img
+                  class="image"
+                  src="https://lh3.googleusercontent.com/pw/AMWts8AdhjQ6n_JIQDbp3ev8_l6rOHEIWgSbs1m0owR9_cb5YCnDP-hL6YDjvGftbCFINugU_mhSSsB8EhX5KLKiRcoIfCLbEpqteF7sZJxd8Hqx_5ye51WXqx_q48rxx8VFHRTCELGdrI-r2hNXvkZX8oue=w1388-h924-no"
+                  draggable="false"
+                />
+                <!-- <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
+                  <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
+                  <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" /> -->
+            </div>
+            <!-- <button onclick="scrollToSection1()">Scroll to Slide 1</button> -->
+        </div>
+
+
+        <div class="slide" id="Slide6">
+            <!-- <img id="dio" src="assets/dio.png" alt=""> -->
+            <div class="diogenes">
+                <h1>PHILOSOPHY</h1>
+                <div id="blackbar6" class="blackbar"></div>
+                <div id="video">
+                    <iframe id="yt" width="560" height="315" style="border-radius:20px" src="https://www.youtube.com/embed/Jv79l1b-eoI?si=G82XtnsbBykv_pqa&amp;clip=UgkxF5qhehnv4xze0fy77lKUjaDYrWn6D0_0&amp;clipt=EJ67HRiDvSA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div id="quote">
+                    <p><i>" With the passion to pursue the joy of being for the sake of it, with the freedom to choose to continue, to choose to live, to create hope internally and with the spirit of revolution, a rebellion against the harshness and strangeness of existence itself... "</i></p>
+                </div>
+                
+            </div>
+            <!-- <button onclick="scrollToSection1()">Scroll to Slide 1</button> -->
+        </div>
+
+        <div class="slide" id="Slide7">
+            
+            <h1 id="contact">CONTACT INFO</h1>
+            <h2 id="zalo">Zalo : 038 6028 567</h2>
+            <h2 id="fb">duy.hocong567@gmail.com</h2>
+            <!-- <img id="return" onclick="scrollToSection1()" src="assets/return.svg" alt=""> -->
+            <!-- <div id="blackbar7" class="blackbar"></div> -->
+            <div class="canvas_wrap">
+                <canvas></canvas>
+            </div>
+            <!-- <button onclick="scrollToSection1()">Scroll to Slide 1</button> -->
+        </div>
     </div>
-    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      <!-- <img class="image" src="" draggable="false"> -->
-      <img
-        class="image"
-        src="https://lh3.googleusercontent.com/pw/AMWts8BzoztX0pKBUCZ0W7z-ZexwKPq7OX0uJDqW0-OmPQ0n3XIv_eNVAcUHAD94u1Cyrv7ip6JG2PWjFZD-BtH76q7qZi2rZKr4Bw16A8IGrSpFqBkFXRHbz3-2dFLFlNv_8QiRmt0RLT78M68AEjm7dUSa=w1644-h924-no"
-        draggable="false"
-      />
-      <img
-        class="image"
-        src="https://lh3.googleusercontent.com/pw/AMWts8CM5FpUPLrtf8IShrcBx8SZ4MWk5KtmDInQJNdm-FkKYq9UIdIiq6i6OWbHaC2dYyQifLFRC8FlrfHGFbokCuUYPAU-xcY7000XQsqz8KBtQj6D9pzIdx_aa0CK7RMqbL_YZ5vOfabIZyhavAFCZv8a=w1643-h924-s-no?authuser=0"
-        draggable="false"
-      />
-      <img
-        class="image"
-        src="https://lh3.googleusercontent.com/pw/AMWts8BOUh7z68L-S9rFDW78hBdBafoET4txRvJkdgaMwPkleGmC6Bt-4m50C2LxO_fBsx8k91AsAcds_qrBp4gTEd-ZfjtNkOSCJ76UA47t8H_-d7XuQmMrI-s009mhdPdduT8lozHfuTHUP8oPeX6_AqA_=w1386-h924-no"
-        draggable="false"
-      />
-      <img
-        class="image"
-        src="https://lh3.googleusercontent.com/pw/AMWts8BE-O_U3HJ982OCGtBLpzPyg7Fp9KrTK6dME_t2b9m5SZnPZKzdumeB3CVLysyd7rN_aQjqhHmTt5q3gS2aDJWvopGCJxghs1D2aXX8nVY21mJuYpubnNzIQFdauEHcQrY5ESMqA8rntfQIHoXlgIQZ=w1644-h924-no"
-        draggable="false"
-      />
-      <img
-        class="image"
-        src="https://lh3.googleusercontent.com/pw/AMWts8AdhjQ6n_JIQDbp3ev8_l6rOHEIWgSbs1m0owR9_cb5YCnDP-hL6YDjvGftbCFINugU_mhSSsB8EhX5KLKiRcoIfCLbEpqteF7sZJxd8Hqx_5ye51WXqx_q48rxx8VFHRTCELGdrI-r2hNXvkZX8oue=w1388-h924-no"
-        draggable="false"
-      />
-      <!-- <img class="image" src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80" draggable="false" />
-        <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
-        <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" /> -->
-    </div>
-    <script src="jquery.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+</body>
+
 </html>
