@@ -157,6 +157,7 @@ a{
     margin: 20px auto 0;
     gap : 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 #apcs{
     height: 180px;
