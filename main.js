@@ -109,6 +109,94 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(sectionFive);
 
 
+const sectionEducation = document.querySelector("#Slide2");
+const observer2 = new IntersectionObserver((entries) => {
+    // IntersectionObserver callback function
+    entries.forEach((entry) => {
+      if(!entry.isIntersecting){
+        return;
+      }
+      if (entry.isIntersecting) {
+        // The observed element is intersecting the viewport
+        var myschool = document.getElementById('school');
+        document.getElementById('school').style.animation = 'SlideUp 1.1s ease-in';
+        // Add the class 'my-class' to the div
+        // myschool.classList.add('slideup1');
+        myschool.classList.remove('hidden');
+
+        var myapcs = document.getElementById('apcs');
+        document.getElementById('apcs').style.animation = 'SlideUp 1.5s ease-in';
+        // Add the class 'my-class' to the div
+        // myapcs.classList.add('slideup2');
+        myapcs.classList.remove('hidden');
+      }
+    });
+  },options);
+
+observer2.observe(sectionEducation);
+
+const sectionProgram = document.querySelector("#Slide3");
+const observer3 = new IntersectionObserver((entries) => {
+    // IntersectionObserver callback function
+    entries.forEach((entry) => {
+      if(!entry.isIntersecting){
+        return;
+      }
+      if (entry.isIntersecting) {
+        // The observed element is intersecting the viewport
+        var c1 = document.getElementById('c1');
+        document.getElementById('c1').style.animation = 'SlideDown 1.3s ease-in';
+        c1.classList.remove('hidden');
+        var p1 = document.getElementById('p1');
+
+        document.getElementById('p1').style.animation = 'SlideDown 1.6s ease-in';
+        p1.classList.remove('hidden');
+        var d1 = document.getElementById('d1');
+
+        document.getElementById('d1').style.animation = 'SlideDown 1.8s ease-in';
+        d1.classList.remove('hidden');
+
+        var g1 = document.getElementById('g1');
+        document.getElementById('g1').style.animation = 'SlideDown 2.0s ease-in';
+        g1.classList.remove('hidden');
+
+        var r1 = document.getElementById('r1');
+        document.getElementById('r1').style.animation = 'SlideDown 2.2s ease-in';
+        r1.classList.remove('hidden');
+
+        var h1 = document.getElementById('h1');
+        document.getElementById('h1').style.animation = 'SlideDown 2.4s ease-in';
+        h1.classList.remove('hidden');
+
+        var f1 = document.getElementById('f1');
+        document.getElementById('f1').style.animation = 'SlideDown 2.6s ease-in';
+        f1.classList.remove('hidden');
+      }
+    });
+  },options);
+  observer3.observe(sectionProgram);
+
+  const sectionLang = document.querySelector("#Slide4");
+  const observer4 = new IntersectionObserver((entries) => {
+      // IntersectionObserver callback function
+      entries.forEach((entry) => {
+        if(!entry.isIntersecting){
+          return;
+        }
+        if (entry.isIntersecting) {
+            var eng = document.getElementById('eng');
+            document.getElementById('eng').style.animation = 'SlideUp 1.3s ease-in';
+            eng.classList.remove('hidden');
+
+            var jap = document.getElementById('jap');
+            document.getElementById('jap').style.animation = 'SlideUp 1.3s ease-in';
+            jap.classList.remove('hidden');
+
+        }
+      });
+    },options);
+  
+  observer4.observe(sectionLang);
 
 // FLUID CODE
 'use strict';

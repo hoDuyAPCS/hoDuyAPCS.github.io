@@ -1,3 +1,71 @@
+/* ANIMATION */
+@keyframes SlideDown {
+    from{
+        transform: translateY(-30%);
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes SlideUp {
+    from{
+        transform: translateY(30%);
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.slidedown1{
+    animation: SlideDown 1.3s ease-in;
+}
+.slidedown2{
+    animation: SlideDown 1.7s ease-in;
+}
+.slidedown3{
+    animation: SlideDown 2.0s ease-in;
+}
+.slideup1{
+    animation: SlideUp 1.3s ease-in;
+}
+.slideup2{
+    animation: SlideUp 1.7s ease-in;
+}
+.slideup3{
+    animation: SlideUp 2.0s ease-in;
+}
+.hidden{
+    opacity: 0;;
+}
+.truehidden{
+    display: none;
+}
+#education{
+    animation: SlideDown 1.3s ease-in;
+}
+#program{
+    animation: SlideDown 1.5s ease-in;
+}
+#lang{
+    animation: SlideDown 1.7s ease-in;
+}
+#game{
+    animation: SlideUp 1.5s ease-in;
+}
+#think{
+    animation: SlideUp 1.7s ease-in;
+}
+/* ----------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -465,7 +533,7 @@ canvas {
 #return{
     width: 50px;
     right: 40px;
-    top: 40px;
+    bottom: 40px;
     z-index: 99;
     position: absolute;
     cursor: pointer;
